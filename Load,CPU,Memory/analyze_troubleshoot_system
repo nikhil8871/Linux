@@ -1,0 +1,6 @@
+8. How do you analyze and troubleshoot a system that is running slowly?
+Ans: Check the cpu/mem stats, io stat ,load average stats. If any process is consuming the mem/cpu
+ we will kill it.  
+A high load average does not automatically mean high I/O.Load average includes processes that are:
+Running or waiting for CPU
+Waiting in uninterruptible sleep (D state), commonly due to I/O.

@@ -1,0 +1,25 @@
+Check:
+1) Disk bottleneck by 
+CMD: iostat -xz <sec refresh> 
+In that check r/s, w/s, await time and utilization.
+
+2) Too many processes blocked: The standard command to check process state is ps;
+ Look for processes with a process status of D (Uninterruptible Sleep/blocked process): ps -aux | awk {'print $8'}
+
+3)  Check memory usage by:
+CMD: free -m or vmstat <refresh sec>
+
+
+High Load Average
+       ↓
+Check CPU usage
+       ↓
+CPU low?
+       ↓
+Check I/O wait → iostat -xz 1
+       ↓
+Check D-state processes → ps -aux 
+       ↓
+Check memory/swap → free -h / vmstat 1
+       ↓
+Check NFS/storage/network issues
