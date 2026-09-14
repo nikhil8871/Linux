@@ -1,0 +1,16 @@
+CMD= sudo crontab -e
+
+#at minute 0 of every hour on the 1st day of every month 
+m   hour date month week
+00  *    1    *     *   /home/nikhil/clean.sh >> /tmp/cleanlogs.txt 2>&1
+
+=======================================================
+
+# Run once a month at midnight on the 1st (00:00):
+0 0 1 * * /path/to/command
+
+=====================================
+* * * * * /home/nikhil/clean.sh >> /tmp/cleanlogs 2>&1
+
+======================
+2>&1=send Standard Error to the same place as Standard Output.
