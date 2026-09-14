@@ -1,9 +1,10 @@
 Check:
 1) /var/log and clean 7 days older logs: syslog, journallog, bootlog
 2) clean /tmp folder
-3) check deleted files but still consuming the storage.
+3) check deleted files but still consuming the storage. (lsof |grep deleted)
 
 Ans:
 Whenever I find an alarm for disk usage firstly i will run the df -kh command;
 to check which /directory is full then going to the /var/log path and cleaning the older logs may;
 be of application or system generated logs.
+
