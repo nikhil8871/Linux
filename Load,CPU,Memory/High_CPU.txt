@@ -1,0 +1,8 @@
+For CPU utilization 
+1) first check which process is consuming memory/cpu. Check the process is
+ critical or not. If critical then y renyc command we decrease the priority of job and if not critical
+ then delete the process.
+
+CMD: ps aux --sort=-%cpu |head
+
+check us, sy, idle, wating 
